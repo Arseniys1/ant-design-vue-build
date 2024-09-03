@@ -84,6 +84,9 @@ const BaseInputInner = defineComponent({
           value
         } = props,
         restProps = __rest(props, ["tag", "value"]);
+      delete restProps['onCompositionend'];
+      delete restProps['onCompositionstart'];
+      // console.log(restProps);
       return _createVNode(Tag, _objectSpread(_objectSpread({}, restProps), {}, {
         "ref": inputRef,
         "value": value
